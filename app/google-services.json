@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "15351830529",
+    "firebase_url": "https://oreopiee-987d4.firebaseio.com",
+    "project_id": "oreopiee-987d4",
+    "storage_bucket": "oreopiee-987d4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:15351830529:android:be02845a26927b2e",
+        "android_client_info": {
+          "package_name": "com.example.oreopie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "15351830529-qsr6151fcvp9qj6kg22i6bj5n7j6gm4t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEJLrIZJwbS_9Wroe1g-CPpSWtXtQ6HYk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
