@@ -30,16 +30,17 @@ import static android.widget.Toast.LENGTH_SHORT;
 
 public class SignUpActivity extends AppCompatActivity {
 
-    private EditText userName, userEmail, userPassword, COnfirmPassword;
+    private EditText userName, userEmail, userPassword, COnfirmPassword,Age;
     private Button SignUpButton;
     private ImageView SignUpLogo;
-    private FirebaseAuth mAuth;
+     FirebaseAuth mAuth;
     private FirebaseUser currentUser;
-    String Email, Password,SecondPassword, Name;
+    String Email, Password,SecondPassword, Name, age;
     private ProgressBar loadingBar;
     private DatabaseReference Ref;
     String currentUserID;
 
+    String UID = "blank";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,9 +65,10 @@ public class SignUpActivity extends AppCompatActivity {
         Password = userPassword.getText().toString();
         SecondPassword = COnfirmPassword.getText().toString();
         Name = userName.getText().toString();
+        age = Age.getText().toString();
 
 
-        if (TextUtils.isEmpty(Email) && TextUtils.isEmpty(Password) && TextUtils.isEmpty(Name)) {
+        if (TextUtils.isEmpty(Email) && TextUtils.isEmpty(Password) && TextUtils.isEmpty(Name) && TextUtils.isEmpty(SecondPassword) && TextUtils.isEmpty(age) ) {
             Toast.makeText(this, "Please fill all details", Toast.LENGTH_SHORT).show();
         }
         if(!Password.equals(SecondPassword))
@@ -85,7 +87,8 @@ public class SignUpActivity extends AppCompatActivity {
                                 profileMap.put("username",Name);
                                 profileMap.put("password",Password);
                                 profileMap.put("email",Email);
-                                Ref.child("Users").child(currentUserID).setValue(profileMap);
+                                profileMap.put("age",age);
+                                Ref.child(UID).setValue(profileMap);
                                 Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                 startActivity(intent);
@@ -107,9 +110,14 @@ public class SignUpActivity extends AppCompatActivity {
 
     private void InitializeFields() {
         mAuth = FirebaseAuth.getInstance();
-        currentUser = mAuth.getCurrentUser();
-        currentUserID = mAuth.getCurrentUser().getUid();
-        Ref = FirebaseDatabase.getInstance().getReference();
+
+        if ( mAuth.getCurrentUser() != null) {
+            currentUser = mAuth.getCurrentUser();
+            UID = currentUser.getUid();
+        }
+
+        Ref = FirebaseDatabase.getInstance().getReference("Users");
+        Age = (EditText)findViewById(R.id.user_age);
         userName = (EditText) findViewById(R.id.full_name);
         userEmail = (EditText) findViewById(R.id.user_email);
         userPassword = (EditText) findViewById(R.id.user_password);

@@ -8,20 +8,20 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:15351830529:android:be02845a26927b2e",
+        "mobilesdk_app_id": "1:290339497982:android:be02845a26927b2e",
         "android_client_info": {
           "package_name": "com.example.oreopie"
         }
       },
       "oauth_client": [
         {
-          "client_id": "15351830529-qsr6151fcvp9qj6kg22i6bj5n7j6gm4t.apps.googleusercontent.com",
+          "client_id": "290339497982-lkiebsoritmepais6b0esi4ogi4pnjo0.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDEJLrIZJwbS_9Wroe1g-CPpSWtXtQ6HYk"
+          "current_key": "AIzaSyAqfmjNTR7l-elhHVPHNF9A8TZYtVKYHe8"
         }
       ],
       "services": {

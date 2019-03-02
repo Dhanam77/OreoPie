@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AboutUsActivity"
-    android:background="@drawable/surge">
+    android:background="@drawable/main">
 <TextView
     android:id="@+id/about_us"
     android:layout_width="wrap_content"
