@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ConfigureActivity"></activity>
+        <activity android:name=".ChatBotActivity"></activity>
+        <activity android:name=".ConfigureActivity" />
         <activity android:name=".ExpenseAnalysis" />
         <activity android:name=".AboutUsActivity" />
         <activity android:name=".LegalActivity" />

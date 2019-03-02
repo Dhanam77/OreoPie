@@ -2,6 +2,7 @@ package com.example.oreopie;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -10,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private Toolbar mToolbar;
     private FirebaseAuth mAuth;
     private FirebaseUser currentUser;
+    private FloatingActionButton myFloat;
 
 
     @Override
@@ -30,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         mToolbar = (Toolbar) findViewById(R.id.maintoolbar);
-
+        myFloat = (FloatingActionButton)findViewById(R.id.my_float);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("PaisaManager");
 
@@ -41,6 +44,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        myFloat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ChatBotActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
