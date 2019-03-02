@@ -21,6 +21,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
 
 import static android.widget.Toast.LENGTH_SHORT;
 
@@ -33,6 +37,9 @@ public class SignUpActivity extends AppCompatActivity {
     private FirebaseUser currentUser;
     String Email, Password,SecondPassword, Name;
     private ProgressBar loadingBar;
+    private DatabaseReference Ref;
+    String currentUserID;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,7 +81,11 @@ public class SignUpActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-
+                                HashMap<String,String> profileMap = new HashMap<>();
+                                profileMap.put("username",Name);
+                                profileMap.put("password",Password);
+                                profileMap.put("email",Email);
+                                Ref.child("Users").child(currentUserID).setValue(profileMap);
                                 Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                 startActivity(intent);
@@ -97,6 +108,8 @@ public class SignUpActivity extends AppCompatActivity {
     private void InitializeFields() {
         mAuth = FirebaseAuth.getInstance();
         currentUser = mAuth.getCurrentUser();
+        currentUserID = mAuth.getCurrentUser().getUid();
+        Ref = FirebaseDatabase.getInstance().getReference();
         userName = (EditText) findViewById(R.id.full_name);
         userEmail = (EditText) findViewById(R.id.user_email);
         userPassword = (EditText) findViewById(R.id.user_password);

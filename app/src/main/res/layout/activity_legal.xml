@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LegalActivity"
+    android:background="@drawable/surge">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/about_us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Legal"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="40dp"
+        android:textSize="35dp"/>
+
+    <TextView
+        android:id="@+id/about"
+        android:layout_marginTop="30dp"
+        android:textSize="25dp"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/about_us"
+        android:layout_centerHorizontal="true"
+        android:text="This application was created with the intent and spirit of a healthy coding competition.
+We a group of aspiring engineers created this within twenty four hours. Due to the time constraints and our limited scope of knowledge we would like to strongly stress that this project in no manner is to be used as a reference for real life transactions. This task is to be appreciated for what it is, a valid proof of our keen interests in other fields and a thirst for positive learning. We hope that this assignment inspires other engineers to follow suit and acts as a reference for their upcoming projects"
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
+</ScrollView>

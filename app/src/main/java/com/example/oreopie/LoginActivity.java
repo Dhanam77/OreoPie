@@ -104,10 +104,11 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void CheckIfAlreadyLoggedIn() {
-        if(currentUser != null)
+        if(mAuth.getCurrentUser()!=null)
         {
             SendUserToMainActivity();
         }
+
     }
 
     private void SendUserToMainActivity() {

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutUsActivity"
+    android:background="@drawable/surge">
+<TextView
+    android:id="@+id/about_us"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:text="About Us"
+    android:textColor="@android:color/white"
+    android:layout_marginTop="40dp"
+    android:textSize="35dp"/>
+
+    <TextView
+        android:id="@+id/about"
+        android:layout_marginTop="30dp"
+        android:textSize="25dp"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/about_us"
+        android:layout_centerHorizontal="true"
+        android:text="This service is brought to you by :
+
+Department of Electronics and Telecommunication Engineering
+
+Dwarkadas J. Sanghvi College of Engineering
+
+Vile Parle (WEST),
+
+Mumbai-400056"
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
