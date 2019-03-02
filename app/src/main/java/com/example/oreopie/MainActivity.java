@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         mToolbar = (Toolbar) findViewById(R.id.maintoolbar);
-        myFloat = (FloatingActionButton)findViewById(R.id.my_float);
+
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("PaisaManager");
 
@@ -45,13 +45,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        myFloat.setOnClickListener(new View.OnClickListener() {
+        /*myFloat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ChatBotActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
     }
 
     @Override
@@ -83,8 +83,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         }
 
+        if(menuItem.getItemId() == R.id.pennymate)
+        {
+            DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+            drawerLayout.closeDrawer(GravityCompat.START);
+            Intent intent = new Intent(MainActivity.this, ChatBotActivity.class);
+            startActivity(intent);
+        }
 
-        return false;
+
+        return true;
     }
 
 
