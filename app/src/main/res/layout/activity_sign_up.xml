@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/"
+    android:background="@android:color/black"
     tools:context=".SignUpActivity">
 
     <RelativeLayout
@@ -17,7 +17,6 @@
             android:layout_height="200dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
-            android:src="@drawable/"
             />
 
         <EditText
@@ -26,8 +25,9 @@
             android:layout_margin="20dp"
             android:layout_height="50dp"
             android:layout_below="@id/signUp_logo"
-            android:background="@drawable/"
-            android:hint="Full name"
+            android:hint="Username"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
             />
 
         <EditText
@@ -35,7 +35,8 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="20dp"
-            android:background="@drawable/"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
             android:hint="Email"
             android:layout_below="@id/full_name"
             app:layout_constraintTop_toBottomOf="@+id/signUp_logo"
@@ -46,10 +47,12 @@
             android:layout_width="match_parent"
             android:layout_margin="20dp"
             android:layout_height="50dp"
-            android:background="@drawable/"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
             android:hint="Password"
             android:inputType="textPassword"
-            android:layout_below="@id/user_email" />
+            android:layout_below="@id/user_email"
+            />
 
         <Button
             android:id="@+id/signup_button"
