@@ -26,20 +26,22 @@ import static android.widget.Toast.LENGTH_SHORT;
 
 public class SignUpActivity extends AppCompatActivity {
 
-    private EditText userName, userEmail, userPassword;
+    private EditText userName, userEmail, userPassword, COnfirmPassword;
     private Button SignUpButton;
     private ImageView SignUpLogo;
     private FirebaseAuth mAuth;
     private FirebaseUser currentUser;
-    String Email, Password, Name;
+    String Email, Password,SecondPassword, Name;
     private ProgressBar loadingBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-
         InitializeFields();
+        loadingBar.setVisibility(View.INVISIBLE);
+
+
 
         SignUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,12 +55,19 @@ public class SignUpActivity extends AppCompatActivity {
 
         Email = userEmail.getText().toString();
         Password = userPassword.getText().toString();
+        SecondPassword = COnfirmPassword.getText().toString();
         Name = userName.getText().toString();
 
 
         if (TextUtils.isEmpty(Email) && TextUtils.isEmpty(Password) && TextUtils.isEmpty(Name)) {
             Toast.makeText(this, "Please fill all details", Toast.LENGTH_SHORT).show();
-        } else {
+        }
+        if(!Password.equals(SecondPassword))
+        {
+            Toast.makeText(SignUpActivity.this,"Passwords don't match!",LENGTH_SHORT);
+        }
+
+        else {
             loadingBar.setVisibility(View.VISIBLE);
             mAuth.createUserWithEmailAndPassword(Email, Password)
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -94,6 +103,7 @@ public class SignUpActivity extends AppCompatActivity {
         SignUpButton = (Button) findViewById(R.id.signup_button);
         SignUpLogo = (ImageView) findViewById(R.id.signUp_logo);
         loadingBar = (ProgressBar)findViewById(R.id.signup_progressBar);
+        COnfirmPassword = (EditText)findViewById(R.id.user_confirmpassword);
     }
 }
 

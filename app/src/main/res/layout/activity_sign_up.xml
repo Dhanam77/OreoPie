@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black"
+    android:background="@drawable/surge"
     tools:context=".SignUpActivity">
 
     <RelativeLayout
@@ -17,54 +17,84 @@
             android:layout_height="200dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
-            />
+            android:src="@drawable/logo" />
 
         <EditText
             android:id="@+id/full_name"
             android:layout_width="match_parent"
-            android:layout_margin="20dp"
             android:layout_height="50dp"
             android:layout_below="@id/signUp_logo"
+            android:layout_margin="20dp"
             android:hint="Username"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white"
-            />
+            android:inputType="text"
+            android:background="@drawable/inputs"
+
+
+            android:ellipsize="start"
+            android:gravity="center"
+             />
 
         <EditText
             android:id="@+id/user_email"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_margin="20dp"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white"
-            android:hint="Email"
             android:layout_below="@id/full_name"
-            app:layout_constraintTop_toBottomOf="@+id/signUp_logo"
-            />
+            android:layout_margin="20dp"
+
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/inputs"
+
+
+            android:ellipsize="start"
+            android:gravity="center"
+
+            app:layout_constraintTop_toBottomOf="@+id/signUp_logo" />
 
         <EditText
             android:id="@+id/user_password"
             android:layout_width="match_parent"
-            android:layout_margin="20dp"
             android:layout_height="50dp"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white"
+            android:background="@drawable/inputs"
+
+
+            android:ellipsize="start"
+            android:gravity="center"
+            android:layout_below="@id/user_email"
+            android:layout_margin="20dp"
             android:hint="Password"
             android:inputType="textPassword"
-            android:layout_below="@id/user_email"
             />
+
+        <EditText
+            android:id="@+id/user_confirmpassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/user_password"
+            android:layout_margin="20dp"
+            android:background="@drawable/inputs"
+
+
+            android:ellipsize="start"
+            android:gravity="center"
+
+
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+             />
 
         <Button
             android:id="@+id/signup_button"
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:layout_below="@id/user_password"
+            android:layout_below="@id/user_confirmpassword"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:background="@drawable/"
+            android:background="@drawable/buttons"
             android:text="Sign Up"
             android:textColor="@android:color/white"
             android:textSize="20dp"
+
             />
 
         <ProgressBar
@@ -72,7 +102,7 @@
             style="?android:attr/progressBarStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"/>
+            android:layout_centerInParent="true" />
 
 
     </RelativeLayout>
