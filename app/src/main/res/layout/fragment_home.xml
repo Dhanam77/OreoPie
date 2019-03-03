@@ -7,32 +7,33 @@
     android:background="@drawable/main">
 
 
-    <include
-        android:id="@+id/main_toolbar"
-        layout="@layout/main_toolbar"/>
+
 
     <Button
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttons"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp"
+        android:text="Add your Income"
+        android:textColor="@android:color/white"
         android:id="@+id/income"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
-        android:background="@drawable/buttons"
-        android:text="Add your income"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
         />
 
     <Button
         android:id="@+id/expenses"
         android:layout_width="200dp"
+
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="300dp"
         android:background="@drawable/buttons"
-        android:text="Add your expenses"
+        android:text="Add your income"
+
         android:textColor="@android:color/white"
         android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+
+
         />
 
 </RelativeLayout>
