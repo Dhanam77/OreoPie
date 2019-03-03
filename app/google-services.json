@@ -8,20 +8,28 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:290339497982:android:be02845a26927b2e",
+        "mobilesdk_app_id": "1:15351830529:android:be02845a26927b2e",
         "android_client_info": {
           "package_name": "com.example.oreopie"
         }
       },
       "oauth_client": [
         {
-          "client_id": "290339497982-lkiebsoritmepais6b0esi4ogi4pnjo0.apps.googleusercontent.com",
+          "client_id": "15351830529-20gjetta45afo1q3vvol64onoqq2en44.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.oreopie",
+            "certificate_hash": "faea51f3ea6012a3aa07a8773fd8f245a5377b75"
+          }
+        },
+        {
+          "client_id": "15351830529-qsr6151fcvp9qj6kg22i6bj5n7j6gm4t.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAqfmjNTR7l-elhHVPHNF9A8TZYtVKYHe8"
+          "current_key": "AIzaSyDEJLrIZJwbS_9Wroe1g-CPpSWtXtQ6HYk"
         }
       ],
       "services": {
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "15351830529-qsr6151fcvp9qj6kg22i6bj5n7j6gm4t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
