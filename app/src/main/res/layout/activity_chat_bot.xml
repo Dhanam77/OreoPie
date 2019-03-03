@@ -2,8 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_gradient"
-    android:orientation="vertical" >
+    android:background="@drawable/chatbotbg"
+    android:orientation="vertical"
+    >
 
 
 
@@ -29,8 +30,9 @@
             android:layout_marginTop="10dp"
             android:text="@string/tap_on_mic"
             android:textColor="@android:color/white"
-            android:textSize="15dp"
-            android:textStyle="normal" />
+            android:textSize="25dp"
+
+            android:textStyle="bold" />
 
     </LinearLayout>
     <LinearLayout
@@ -61,7 +63,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Reponse"
+            android:textSize="20dp"
             android:textColor="@android:color/white"
+            android:textStyle="bold"
             />
         <TextView
             android:id="@+id/outputTex"

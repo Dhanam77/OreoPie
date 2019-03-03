@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
     <item android:title="PennyMate"
+
         android:id="@+id/pennymate"/>
 <group android:checkableBehavior="single">
 
@@ -10,14 +11,6 @@
         android:id="@+id/expense"
         android:title="Expenses Analysis"
         />
-    <item
-        android:title="Daily"/>
-    <item
-        android:title="Weekly"/>
-    <item
-        android:title="Monthly"/>
-    <item
-        android:title="Annually"/>
 
 </group>
 

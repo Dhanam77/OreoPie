@@ -2,22 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="176dp"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/navbg"
     android:gravity="bottom"
-    android:orientation="vertical">
+    android:orientation="horizontal">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:layout_marginLeft="15dp"
-        android:src="@mipmap/ic_launcher" />
+        android:src="@drawable/cdslogo" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
         android:text="Dhanam Parekh"
         android:textColor="@android:color/white"
-        android:layout_marginLeft="10dp"
-
-        android:textSize="25dp" />
+        android:textSize="25dp"
+        android:layout_marginBottom="27dp"
+        android:textStyle="bold"/>
 </LinearLayout>

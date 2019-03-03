@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddExpense"
+    android:background="@android:color/black">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/addexpenselogo"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/cdslogo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addexpenselogo"
+        android:textColor="@android:color/white"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="Add your expenses here"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="300dp"
+        >
+        <TextView
+            android:id="@+id/LoanView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+
+            android:layout_marginStart="30dp"
+            android:text="Loan:"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:textStyle="bold">
+        </TextView>
+        <EditText
+            android:id="@+id/loanText"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:hint="     Amount"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="180dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"></EditText>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="350dp"
+        >
+        <TextView
+            android:id="@+id/medicalView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+
+            android:layout_marginStart="30dp"
+            android:text="Medical:"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:textStyle="bold">
+        </TextView>
+        <EditText
+            android:id="@+id/medicalText"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="180dp"
+            android:hint="     Amount"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"></EditText>>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="400dp"
+        >
+        <TextView
+            android:id="@+id/FoodView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+
+            android:layout_marginStart="30dp"
+            android:text="Food:"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:textStyle="bold">
+        </TextView>
+        <EditText
+            android:id="@+id/foodText"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:hint="     Amount"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="180dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"></EditText>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="450dp"
+        >
+        <TextView
+            android:id="@+id/clothingView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+
+            android:layout_marginStart="30dp"
+            android:text="Clothing:"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:textStyle="bold">
+        </TextView>
+        <EditText
+            android:id="@+id/clothingText"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:hint="     Amount"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="180dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"></EditText>
+    </RelativeLayout>>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="500dp"
+        >
+        <TextView
+            android:id="@+id/transportView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+
+            android:layout_marginStart="30dp"
+            android:text="Transport:"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:textStyle="bold">
+        </TextView>>
+        <EditText
+            android:id="@+id/transportText"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:hint="     Amount"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="180dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black">
+
+        </EditText>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="550dp"
+        >
+        <TextView
+            android:id="@+id/leisureView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+
+            android:layout_marginStart="30dp"
+            android:text="Leisure:"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:textStyle="bold">
+        </TextView>>
+        <EditText
+            android:id="@+id/leisureText"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:hint="     Amount"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="180dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black">
+
+        </EditText>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="600dp"
+        >
+        <TextView
+            android:id="@+id/billsView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+
+            android:layout_marginStart="30dp"
+            android:text="Bills:"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:textStyle="bold">
+        </TextView>>
+        <EditText
+            android:id="@+id/billsText"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:hint="     Amount"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="180dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"></EditText>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="650dp"
+        >
+        <TextView
+            android:id="@+id/EducationView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+
+            android:layout_marginStart="30dp"
+            android:text="Education:"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:textStyle="bold">
+        </TextView>>
+        <EditText
+            android:id="@+id/educationText"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:hint="     Amount"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="180dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"></EditText>
+        <Button
+            android:layout_below="@+id/educationText"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/buttons"
+            android:layout_centerHorizontal="true"
+            android:text="Submit"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+    </RelativeLayout>>
+    </RelativeLayout>
+</ScrollView>

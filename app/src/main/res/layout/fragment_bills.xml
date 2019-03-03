@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BillsFragment">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        tools:context=".billAdder">
+
+    <TextView
+        android:id="@+id/addBills"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Your Bills!"
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true"
+        android:textSize="40dp"
+        android:layout_marginTop="50dp"
+        >
+
+    </TextView>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttons"
+        android:text="Remind Me!"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/amount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+
+    <EditText
+        android:id="@+id/billType"
+        android:layout_height="60dp"
+        android:layout_width="320dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:background="@android:color/white"
+        android:textColor="@android:color/darker_gray"
+        android:hint="Bill Type"
+
+        android:textSize="35dp"
+        android:textAlignment="center"
+
+        >
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/companyName"
+        android:layout_height="60dp"
+        android:layout_width="320dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:background="@android:color/white"
+        android:textColor="@android:color/darker_gray"
+        android:hint="Company Name"
+
+        android:textSize="35dp"
+        android:textAlignment="center"
+
+        ></EditText>>
+
+    <EditText
+        android:id="@+id/date"
+        android:layout_height="60dp"
+        android:layout_width="320dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="350dp"
+        android:background="@android:color/white"
+        android:textColor="@android:color/darker_gray"
+        android:hint="Date(dd/mm/yy)"
+
+        android:textSize="35dp"
+        android:textAlignment="center"
+
+        >
+
+    </EditText>
+
+    <EditText
+
+        android:id="@+id/amount"
+        android:layout_height="60dp"
+        android:layout_width="320dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="450dp"
+        android:background="@android:color/white"
+        android:textColor="@android:color/darker_gray"
+        android:hint="Amount"
+
+        android:textSize="35dp"
+        android:textAlignment="center"
+
+        ></EditText>
+
+</RelativeLayout>
+
+</RelativeLayout>

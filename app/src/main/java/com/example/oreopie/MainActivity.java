@@ -2,8 +2,10 @@ package com.example.oreopie;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private FirebaseAuth mAuth;
     private FirebaseUser currentUser;
     private FloatingActionButton myFloat;
+    private BottomNavigationView myBot;
 
 
     @Override
@@ -41,17 +44,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, mToolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container1, new HomeFragment()).commit();
+        myBot = (BottomNavigationView) findViewById(R.id.my_bot);
 
+        myBot.setOnNavigationItemSelectedListener(navListener);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        /*myFloat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ChatBotActivity.class);
-                startActivity(intent);
-            }
-        });*/
     }
 
     @Override
@@ -94,6 +93,40 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         return true;
     }
+
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+            Fragment selectedFragment = new HomeFragment();
+
+
+            switch (menuItem.getItemId()) {
+
+                case R.id.home:
+                {
+                    selectedFragment = new HomeFragment();
+                    break;
+                }
+
+                case R.id.bills: {
+                    selectedFragment = new BillsFragment();
+                    break;
+                }
+
+                case R.id.investment: {
+                    selectedFragment = new InvestmentFragment();
+                    break;
+                }
+                case R.id.budget:
+                    selectedFragment = new BudgetFragment();
+                    break;
+            }
+
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container1, selectedFragment).commit();
+
+            return true;
+        }
+    };
 
 
 }

@@ -10,6 +10,32 @@
 
    <include
        layout="@layout/main_toolbar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <FrameLayout
+            android:id="@+id/fragment_container1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/my_bot"
+
+            />
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/my_bot"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            app:menu="@menu/botbot"
+            android:background="?android:attr/windowBackground"
+            app:itemTextColor="@android:color/black"
+            app:itemIconTint="@android:color/black"
+            />
+    </RelativeLayout>
+
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
@@ -20,6 +46,7 @@
         app:menu="@menu/bot_menu"
         app:headerLayout="@layout/nav_header">
     </android.support.design.widget.NavigationView>
+
 
 
 
