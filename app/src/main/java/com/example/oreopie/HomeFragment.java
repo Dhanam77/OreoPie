@@ -36,6 +36,15 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+        addIncome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),AddIncome.class);
+                startActivity(intent);
+            }
+        });
+
         return myView;
     }
 

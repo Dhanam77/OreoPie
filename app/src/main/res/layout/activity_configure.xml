@@ -16,6 +16,7 @@
         >
 
         <TextView
+
             android:layout_width="200dp"
             android:layout_height="80dp"
             android:layout_marginTop="30dp"
@@ -26,6 +27,7 @@
 
         </TextView>
         <EditText
+            android:id="@+id/annualIncome"
             android:layout_width="200dp"
             android:layout_height="40dp"
             android:background="@android:color/white"
@@ -38,7 +40,22 @@
         </EditText>>
 
 
-    </LinearLayout>>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        >
+        <Button
+            android:layout_height="60dp"
+            android:layout_width="150dp"
+            android:layout_centerHorizontal="true"
+            android:text="Submit"
+            android:background="@android:color/white"
+            android:onClick="aSalary"
+            ></Button>
+    </RelativeLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -64,7 +81,8 @@
             android:background="@android:color/white"
             android:paddingHorizontal="250dp"
             android:textColor="@android:color/black"
-            android:textSize="25dp">
+            android:textSize="25dp"
+            android:id="@+id/need">
 
         </EditText>>
 
@@ -104,7 +122,9 @@
             android:background="@android:color/white"
             android:paddingHorizontal="250dp"
             android:textColor="@android:color/black"
-            android:textSize="25dp">
+            android:textSize="25dp"
+            android:id="@+id/want"
+            >
 
         </EditText>>
 
@@ -128,6 +148,7 @@
             </TextView>
 
             <EditText
+                android:id="@+id/savings"
                 android:layout_width="200dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="30dp"

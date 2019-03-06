@@ -11,8 +11,8 @@
         >
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="Manage Your Budgets on one click!"
+            android:layout_height="150dp"
+            android:text="Chat with our AI Integrated ChatBot \nPennyMate!"
             android:textSize="40dp"
             android:textColor="#50e7d3"
             android:textAlignment="center"

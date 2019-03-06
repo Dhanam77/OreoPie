@@ -7,10 +7,6 @@
         android:id="@+id/pennymate"/>
 <group android:checkableBehavior="single">
 
-    <item
-        android:id="@+id/expense"
-        android:title="Expenses Analysis"
-        />
 
 </group>
 

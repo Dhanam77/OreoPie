@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="300dp"
         android:background="@drawable/buttons"
-        android:text="Add your income"
+        android:text="Add your expenses"
 
         android:textColor="@android:color/white"
         android:textStyle="bold"

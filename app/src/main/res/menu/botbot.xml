@@ -2,15 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
    <item
        android:title="Home"
+       android:icon="@drawable/ic_home_black_24dp"
+       android:iconTint="@android:color/white"
        android:id="@+id/home"/>
     <item
         android:id="@+id/bills"
+        android:icon="@drawable/ic_attach_money_black_24dp"
+        android:iconTint="@android:color/white"
         android:title="Bills" />
     <item
         android:id="@+id/investment"
+        android:icon="@drawable/ic_monetization_on_black_24dp"
+        android:iconTint="@android:color/white"
         android:title="Investments" />
-    <item
-        android:id="@+id/budget"
-        android:title="Budget" />
+
 
 </menu>

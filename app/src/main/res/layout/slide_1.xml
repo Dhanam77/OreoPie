@@ -13,7 +13,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:text="Manage Your Budgets on the go!"
+            android:text="Manage Your Finances on the go!"
             android:textSize="40dp"
             android:textColor="#50e7d3"
             android:textAlignment="center"

@@ -30,9 +30,9 @@
             android:layout_height="55dp"
             android:layout_alignParentBottom="true"
             app:menu="@menu/botbot"
-            android:background="?android:attr/windowBackground"
-            app:itemTextColor="@android:color/black"
-            app:itemIconTint="@android:color/black"
+            android:background="@color/colorPrimary"
+            app:itemTextColor="@android:color/white"
+
             />
     </RelativeLayout>
 

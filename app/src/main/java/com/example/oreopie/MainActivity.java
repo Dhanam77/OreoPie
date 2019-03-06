@@ -90,6 +90,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(intent);
         }
 
+        if(menuItem.getItemId() == R.id.config)
+        {
+            DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+            drawerLayout.closeDrawer(GravityCompat.START);
+            Intent intent = new Intent(MainActivity.this, ConfigureActivity.class);
+            startActivity(intent);
+
+        }
+
 
         return true;
     }
@@ -102,8 +111,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             switch (menuItem.getItemId()) {
 
-                case R.id.home:
-                {
+                case R.id.home: {
                     selectedFragment = new HomeFragment();
                     break;
                 }
@@ -117,9 +125,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     selectedFragment = new InvestmentFragment();
                     break;
                 }
-                case R.id.budget:
-                    selectedFragment = new BudgetFragment();
-                    break;
             }
 
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container1, selectedFragment).commit();

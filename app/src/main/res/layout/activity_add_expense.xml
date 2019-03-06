@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddExpense"
-    android:background="@android:color/black">
+    android:background="@drawable/main">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -258,7 +258,35 @@
             android:text="Submit"
             android:textColor="@android:color/white"
             android:layout_width="wrap_content"
-            android:layout_height="40dp" />
-    </RelativeLayout>>
+            android:layout_height="60dp" />
+    </RelativeLayout>
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Want"
+            android:textSize="29dp"
+            android:outlineAmbientShadowColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:layout_marginLeft="49dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/addExpenses"
+            android:buttonTint="@android:color/white"/>
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Need"
+            android:textSize="29dp"
+            android:outlineAmbientShadowColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/addExpenses"
+            android:buttonTint="@android:color/white"/>
+
     </RelativeLayout>
 </ScrollView>

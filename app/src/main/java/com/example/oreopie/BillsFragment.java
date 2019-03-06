@@ -48,7 +48,7 @@ public class BillsFragment extends Fragment {
             String d = Amount.getText().toString();
             @Override
             public void onClick(View v) {
-               if(!TextUtils.isEmpty(a) && !TextUtils.isEmpty(b) && !TextUtils.isEmpty(c) && !TextUtils.isEmpty(d))
+               if(TextUtils.isEmpty(a) && TextUtils.isEmpty(b) && TextUtils.isEmpty(c) && TextUtils.isEmpty(d))
                {
 
                }
